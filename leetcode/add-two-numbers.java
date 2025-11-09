@@ -25,7 +25,7 @@ class Solution {
             carry = sum/10;
             int digit = sum % 10;
 
-                        current.next = new ListNode(digit); // add node to result
+            current.next = new ListNode(digit); // add node to result
             current = current.next;             // move result pointer
 
             if (l1 != null) l1 = l1.next; // move list pointers if possible
