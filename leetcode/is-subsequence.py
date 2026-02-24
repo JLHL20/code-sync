@@ -1,20 +1,24 @@
-class Solution(object):
-    def isSubsequence(self, s, t):
-        """
-        :type s: str
-        :type t: str
-        :rtype: bool
-        """
-        if s == '': return True 
-        if len(s) > len(t): return False
-        A = 0 #First Pointer
-        B = 0 #Second Pointer
+class Solution {
+    public boolean isSubsequence(String s, String t) {
 
-        #Loop through the String
-        while A < len(s) and B < len(t):
-            #Checks if they are equal
-            if s[A] == t[B]:
-                A += 1 #Updates First Pointer
-            B += 1 #Always Updates Second Pointer
-        return A == len(s) #If the First pointer ever gets to the same length means we finish
-        #return True, otherwise false
+        if(s.length() > t.length()) return false;
+        if(s.equals("")) return true;
+        
+        int A = 0;
+        int B = 0;
+
+        while(A < s.length() && B < t.length()){
+            
+            if(s.charAt(A) == t.charAt(B)){
+                A++;
+            }
+            B++;
+
+            if(A >= s.length()){
+                return true;
+            }
+        } 
+
+        return false;
+    }
+}
