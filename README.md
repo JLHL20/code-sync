@@ -1,2 +1,2 @@
-# code-sync
-Coding solutions automatically synced from dotpush extension - https://dotpush.ca/
+# Leet-code sync
+Coding solutions automatically synced from LeetCode, using dotpush extension - https://dotpush.ca/
